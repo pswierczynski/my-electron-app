@@ -11,3 +11,14 @@ Prosta aplikacja Electron do automatycznego tworzenia struktury folderów projek
 ```bash
 npm install
 npm start
+
+---
+
+## 🔄 Aktualizowanie zmian
+
+Kiedy coś zmienisz (np. poprawisz `index.html`):
+
+```bash
+git add .
+git commit -m "Poprawa interfejsu i stylów"
+git push
