@@ -5,32 +5,34 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build:win": "electron-builder --win portable"
   },
   "build": {
-  "appId": "com.kurylowicz.foldercreator",
-  "productName": "Folder Creator",
-  "asar": true,
-  "directories": {
-    "output": "dist"
-  },
-  "files": [
-    "main.js",
-    "renderer.js",
-    "index.html",
-    "package.json"
-  ],
-  "win": {
-    "target": [
-      {
-        "target": "portable",
-        "arch": ["x64"]
-      }
+    "appId": "com.kurylowicz.foldercreator",
+    "productName": "Folder Creator",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "package.json"
     ],
-    "icon": "icon.ico",
-    "artifactName": "CPK Folder Creator.exe"
-  }
-},
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico",
+      "artifactName": "CPK Folder Creator.exe"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "my-electron-app"
@@ -43,6 +45,7 @@
   "devDependencies": {
     "@electron-forge/publisher-github": "^7.10.2",
     "electron": "^38.4.0",
-    "electron-builder": "^26.0.12"
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.1"
   }
 }
