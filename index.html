@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Tworzenie struktury folderów</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #3c3c3c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 30px 40px;
+      text-align: left;
+    }
+
+    section {
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Usuń dolną linię w ostatniej sekcji */
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .structure-details {
+      font-size: 0.85em;
+      color: #555;
+      display: block;
+      margin-top: 4px;
+    }
+
+    input[type="text"] {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 6px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #selectedPath {
+      color: #555;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>📁 Tworzenie struktury folderów projektowych</header>
+
+  <main>
+
+    <!-- SEKCJA 1: Struktura folderów -->
+    <section>
+      <p>
+        <strong>Struktura tworzonych folderów:</strong><br />
+        <span class="structure-details">
+          MainFolder → [01_Overall, 02_WP1, 03_WP3, 04_WP4, 05_Models]<br />
+          01_Overall–04_WP4 → [01_Doc_Native, 02_Doc_PDF, 03_Layouts_CAD, 04_Layouts_PDF]<br />
+          05_Models → [01_RVT, 02_NWC, 03_IFC, 04_DWG]
+        </span>
+      </p>
+    </section>
+
+    <!-- SEKCJA 2: Wybór lokalizacji -->
+    <section>
+      <button id="selectFolderBtn">Wybierz lokalizację</button>
+      <p id="selectedPath"></p>
+    </section>
+
+    <!-- SEKCJA 3: Nazwa folderu głównego i przycisk -->
+    <section>
+      <label for="folderName"><strong>Nazwa folderu głównego:</strong></label><br>
+      <input id="folderName" type="text" placeholder="Wpisz nazwę folderu głównego"><br>
+
+      <button id="createBtn">Utwórz strukturę</button>
+      <p id="status"></p>
+    </section>
+
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

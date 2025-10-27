@@ -1,0 +1,48 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Folder Creator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+  "appId": "com.kurylowicz.foldercreator",
+  "productName": "Folder Creator",
+  "asar": true,
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "main.js",
+    "renderer.js",
+    "index.html",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "icon.ico",
+    "artifactName": "CPK Folder Creator.exe"
+  }
+},
+  "repository": {
+    "type": "git",
+    "url": "my-electron-app"
+  },
+  "keywords": [
+    "code"
+  ],
+  "author": "Przemek",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/publisher-github": "^7.10.2",
+    "electron": "^38.4.0",
+    "electron-builder": "^26.0.12"
+  }
+}
